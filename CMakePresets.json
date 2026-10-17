@@ -1,0 +1,57 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "vs2022",
+      "displayName": "Visual Studio 2022 (x64)",
+      "generator": "Visual Studio 17 2022",
+      "architecture": {
+        "value": "x64",
+        "strategy": "set"
+      },
+      "binaryDir": "${sourceDir}/build/vs2022"
+    },
+    {
+      "name": "ninja",
+      "displayName": "Ninja (from a Developer Command Prompt)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "vs2022-release",
+      "configurePreset": "vs2022",
+      "configuration": "Release"
+    },
+    {
+      "name": "ninja-release",
+      "configurePreset": "ninja"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "vs2022",
+      "configurePreset": "vs2022",
+      "configuration": "Release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "ninja",
+      "configurePreset": "ninja",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}
