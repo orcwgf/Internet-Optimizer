@@ -6,9 +6,6 @@ A small Windows console app that shows which processes are using your network
 **right now**, how fast each one is transferring, and lets you stop or pause
 them with a warning for anything important.
 
-No installer, no telemetry, no online lookups, no external libraries. One
-`netpilot.exe` is enough to hand to a friend.
-
 ```
   NetPilot network optimizer                                      administrator │ 22:42:00
   LIVE  ↓ 600.0 KB/s   ↑ 12.0 KB/s   │ session  ↓ 1.9 GB   ↑ 80.2 MB
